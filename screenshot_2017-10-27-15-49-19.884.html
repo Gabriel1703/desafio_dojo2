@@ -1,0 +1,1786 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en_us" class="yui3-js-enabled"><head>
+    <link rel="SHORTCUT ICON" href="themes/SuiteP/images/sugar_icon.ico?v=prtr747ZDllDCQrg6pfcIA" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <!-- Bootstrap -->
+    <link href="themes/SuiteP/css/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="themes/SuiteP/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="themes/SuiteP/css/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="themes/SuiteP/css/grid.css" rel="stylesheet" type="text/css" />
+    <link href="themes/SuiteP/css/footable.core.css" rel="stylesheet" type="text/css" />
+
+    <title>SuiteCRM</title>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>jscal_today = 1000*1509130157; if(typeof app_strings == "undefined") app_strings = new Array();</script><script type="text/javascript" src="cache/include/javascript/sugar_grp1_jquery.js?v=prtr747ZDllDCQrg6pfcIA"></script><script type="text/javascript" src="cache/include/javascript/sugar_grp1_yui.js?v=prtr747ZDllDCQrg6pfcIA"></script><script type="text/javascript" src="cache/include/javascript/sugar_grp1.js?v=prtr747ZDllDCQrg6pfcIA"></script><script type="text/javascript" src="include/javascript/calendar.js?v=prtr747ZDllDCQrg6pfcIA"></script><script>
+SUGAR.config.stockAjaxBannedModules = ["Calendar","Emails","Campaigns","Documents","DocumentRevisions","Project","ProjectTask","EmailMarketing","CampaignLog","CampaignTrackers","Releases","Groups","EmailMan","Administration","ModuleBuilder","Schedulers","SchedulersJobs","DynamicFields","EditCustomFields","EmailTemplates","Users","Currencies","Trackers","Connectors","Import_1","Import_2","Versions","vCals","CustomFields","Roles","Audit","InboundEmail","SavedSearch","UserPreferences","MergeRecords","EmailAddresses","Relationships","Employees","Import","OAuthKeys","SecurityGroups"];
+SUGAR.config.disableAjaxUI = false;
+SUGAR.config.addAjaxBannedModules = ["SecurityGroups"];</script>
+<script type="text/javascript">SUGAR.themes.image_server="";</script><script type="text/javascript">var name_format = "f l";</script><script type="text/javascript">
+	var time_reg_format = '([0-9]{1,2}):([0-9]{1,2})([ ]*[ap]m)';
+	var date_reg_format = '([0-9]{1,2})/([0-9]{1,2})/([0-9]{4})';
+	var date_reg_positions = { 'm': 1,'d': 2,'Y': 3 };
+	var time_separator = ':';
+	var cal_date_format = '%m/%d/%Y';
+	var time_offset = 3600;
+	var num_grp_sep = '.';
+	var dec_sep = ',';
+</script><script type="text/javascript" src="cache/jsLanguage/en_us.js?v=zXbb-24R2vJcNUNAlb1Kzw"></script><script type="text/javascript" src="cache/jsLanguage/Tasks/en_us.js?v=zXbb-24R2vJcNUNAlb1Kzw"></script><script type="text/javascript">
+var sugar_cache_dir = 'cache/';
+var module_sugar_grp1 = 'Tasks';
+var action_sugar_grp1 = 'DetailView';
+</script>
+<script type="text/javascript" src="cache/themes/SuiteP/js/style-min.js?v=prtr747ZDllDCQrg6pfcIA"></script>
+    
+    <script type="text/javascript">
+        &lt;!--
+        SUGAR.themes.theme_name = 'SuiteP';
+        SUGAR.themes.theme_ie6compat = 'false';
+        SUGAR.themes.hide_image = 'themes/default/images/hide.gif?v=prtr747ZDllDCQrg6pfcIA';
+        SUGAR.themes.show_image = 'themes/default/images/show.gif?v=prtr747ZDllDCQrg6pfcIA';
+        SUGAR.themes.loading_image = 'themes/default/images/img_loading.gif?v=prtr747ZDllDCQrg6pfcIA';
+        SUGAR.themes.allThemes = eval();
+        if (YAHOO.env.ua)
+            UA = YAHOO.env.ua;
+        --&gt;
+    </script>
+    
+    
+            <!-- qtip & suggestion box -->
+            <link rel="stylesheet" type="text/css" href="include/javascript/qtip/jquery.qtip.min.css" /><link rel="stylesheet" type="text/css" href="" /><link rel="stylesheet" type="text/css" href="include/javascript/jquery/themes/base/jquery.ui.all.css" /><link rel="stylesheet" type="text/css" href="cache/themes/SuiteP/css/deprecated.css?v=prtr747ZDllDCQrg6pfcIA" /><link rel="stylesheet" type="text/css" href="cache/themes/SuiteP/css/style.css?v=prtr747ZDllDCQrg6pfcIA" />
+    <link rel="stylesheet" type="text/css" href="themes/SuiteP/css/colourSelector.php" />    
+    <script type="text/javascript" src="themes/SuiteP/js/jscolor.js?v=prtr747ZDllDCQrg6pfcIA"></script>
+    <script type="text/javascript" src="cache/include/javascript/sugar_field_grp.js?v=prtr747ZDllDCQrg6pfcIA"></script>
+</head><body onmouseout="closeMenus();"><div id="ygddfdiv" style="position: absolute; visibility: hidden; cursor: move; border: 2px solid transparent; z-index: 999; height: 25px; width: 25px; background-color: rgb(246, 245, 229); opacity: 0.76;"><div style="height: 100%; width: 100%; background-color: rgb(204, 204, 204); opacity: 0;"></div></div>
+
+    <div id="ajaxHeader">
+        <!--Start Responsive Top Navigation Menu -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="dropdown">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="dropdown-menu mobile_menu" role="menu" id="mobile_menu">
+                                                                                                                                                                                                                                                                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DAll'">
+                                    Home
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAccounts%26action%3Dindex%26parentTab%3DAll'">
+                                    Accounts
+                                                                            <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Accounts'"></span>
+                                                                                                            </a>
+                            </li>
+                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DContacts%26action%3Dindex%26parentTab%3DAll'">
+                                    Contacts
+                                                                            <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Contacts'"></span>
+                                                                                                            </a>
+                            </li>
+                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DOpportunities%26action%3Dindex%26parentTab%3DAll'">
+                                    Opportunities
+                                                                            <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Opportunities'"></span>
+                                                                                                            </a>
+                            </li>
+                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DLeads%26action%3Dindex%26parentTab%3DAll'">
+                                    Leads
+                                                                            <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Leads'"></span>
+                                                                                                            </a>
+                            </li>
+                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Quotes%26action%3Dindex%26parentTab%3DAll'">
+                                    Quotes
+                                                                            <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOS_Quotes'"></span>
+                                                                                                            </a>
+                            </li>
+                                                    <li role="presentation" data-test="1">
+                                                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DAll'">
+                                    Tasks
+                                                                            <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Tasks'"></span>
+                                                                                                            </a>
+                            </li>
+                                                                            <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = 'index.php?module=Calendar&amp;action=index&amp;parentTab=All'">
+                                    Calendar
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Calendar'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = 'index.php?module=Documents&amp;action=index&amp;parentTab=All'">
+                                    Documents
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Documents'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = 'index.php?module=Emails&amp;action=index&amp;parentTab=All'">
+                                    Emails
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Emails'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DSpots%26action%3Dindex%26parentTab%3DAll'">
+                                    Spots
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Spots'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = 'index.php?module=Campaigns&amp;action=index&amp;parentTab=All'">
+                                    Campaigns
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Campaigns'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCalls%26action%3Dindex%26parentTab%3DAll'">
+                                    Calls
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Calls'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DMeetings%26action%3Dindex%26parentTab%3DAll'">
+                                    Meetings
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Meetings'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DNotes%26action%3Dindex%26parentTab%3DAll'">
+                                    Notes
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Notes'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Invoices%26action%3Dindex%26parentTab%3DAll'">
+                                    Invoices
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOS_Invoices'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Contracts%26action%3Dindex%26parentTab%3DAll'">
+                                    Contracts
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOS_Contracts'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3Dindex%26parentTab%3DAll'">
+                                    Cases
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Cases'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DProspects%26action%3Dindex%26parentTab%3DAll'">
+                                    Targets
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Prospects'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DProspectLists%26action%3Dindex%26parentTab%3DAll'">
+                                    Target Lists
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=ProspectLists'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = 'index.php?module=Project&amp;action=index&amp;parentTab=All'">
+                                    Projects
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=Project'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAM_ProjectTemplates%26action%3Dindex%26parentTab%3DAll'">
+                                    Project Templates
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AM_ProjectTemplates'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DFP_events%26action%3Dindex%26parentTab%3DAll'">
+                                    Events
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=FP_events'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DFP_Event_Locations%26action%3Dindex%26parentTab%3DAll'">
+                                    Locations
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=FP_Event_Locations'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Products%26action%3Dindex%26parentTab%3DAll'">
+                                    Products
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOS_Products'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Product_Categories%26action%3Dindex%26parentTab%3DAll'">
+                                    Product Categories
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOS_Product_Categories'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_PDF_Templates%26action%3Dindex%26parentTab%3DAll'">
+                                    PDF Templates
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOS_PDF_Templates'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Maps%26action%3Dindex%26parentTab%3DAll'">
+                                    Maps
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=jjwg_Maps'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Markers%26action%3Dindex%26parentTab%3DAll'">
+                                    Map Markers
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=jjwg_Markers'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Areas%26action%3Dindex%26parentTab%3DAll'">
+                                    Map Areas
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=jjwg_Areas'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Address_Cache%26action%3Dindex%26parentTab%3DAll'">
+                                    Map Address Cache
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=jjwg_Address_Cache'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOR_Reports%26action%3Dindex%26parentTab%3DAll'">
+                                    Reports
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOR_Reports'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOW_WorkFlow%26action%3Dindex%26parentTab%3DAll'">
+                                    WorkFlow
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOW_WorkFlow'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOK_KnowledgeBase%26action%3Dindex%26parentTab%3DAll'">
+                                    Knowledge Base
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOK_KnowledgeBase'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = '?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOK_Knowledge_Base_Categories%26action%3Dindex%26parentTab%3DAll'">
+                                    KB Categories
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=AOK_Knowledge_Base_Categories'"></span>
+                                                                    </a>
+                            </li>
+                                                    <li role="presentation" data-test="2">
+                                <a href="javascript:void(0)" onclick="window.location.href = 'index.php?module=EmailTemplates&amp;action=index&amp;parentTab=All'">
+                                    Email Templates
+                                    <span class="glyphicon glyphicon-plus" onclick="window.location.href = 'index.php?action=EditView&amp;module=EmailTemplates'"></span>
+                                                                    </a>
+                            </li>
+                                                                        </ul>
+            <div id="mobileheader" class="mobileheader">
+                <div id="modulelinks" class="modulelinks">
+                                                                                                                                                                                                                                                                                                                                                <span class="modulename" data-toggle="dropdown" aria-expanded="false"><a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex" id="moduleTab_Tasks" module="Tasks">Tasks</a>
+                            </span>
+
+                                <ul class="dropdown-menu" role="menu">
+                                                                                                           <ul>
+                                                                                                                                             <li class="mobile-action"><a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26return_module%3DTasks%26return_action%3DDetailView">Create Task</a></li>
+                                                                                                                                                                                            <li class="mobile-action"><a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26return_module%3DTasks%26return_action%3DDetailView">View Tasks</a></li>
+                                                                                                                                                                                            <li class="mobile-action"><a href="index.php?module=Import&amp;action=Step1&amp;import_module=Tasks&amp;return_module=Tasks&amp;return_action=index">Import Tasks</a></li>
+                                                                                                                                 </ul>
+                                                                
+                                                                            <li class="recent-links-title" role="presentation">
+                                            <a><strong>Recently Viewed</strong></a>
+                                        </li>
+                                        <li role="presentation">
+                                            <ul class="recent-list">
+                                                                                                                                                             <li class="recentlinks" role="presentation">
+                                                            <a title="Tasks" accesskey="1" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DDetailView%26record%3D273fc4a4-565f-1e9e-efe5-59f36c5a8439" class="recent-links-detail">
+                                                                <img src="themes/SuiteP/images/sidebar/modules/Tasks.svg" /><span aria-hidden="true">Desafio Dojo...</span>
+                                                            </a>
+                                                            <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26record%3D273fc4a4-565f-1e9e-efe5-59f36c5a8439" class="recent-links-edit"><span class=" glyphicon glyphicon-pencil"></span></a>
+                                                        </li>
+                                                                                                                                                                                                                 <li class="recentlinks" role="presentation">
+                                                            <a title="Cases" accesskey="2" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3DDetailView%26record%3D3aa0df1e-3876-d7d6-f295-59f371e0b71a" class="recent-links-detail">
+                                                                <img src="themes/SuiteP/images/sidebar/modules/Cases.svg" /><span aria-hidden="true">Thats a case 1</span>
+                                                            </a>
+                                                            <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3DEditView%26record%3D3aa0df1e-3876-d7d6-f295-59f371e0b71a" class="recent-links-edit"><span class=" glyphicon glyphicon-pencil"></span></a>
+                                                        </li>
+                                                                                                                                                                                                                 <li class="recentlinks" role="presentation">
+                                                            <a title="Cases" accesskey="3" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3DDetailView%26record%3D169ea793-90b1-2ab5-9153-59e74f52592b" class="recent-links-detail">
+                                                                <img src="themes/SuiteP/images/sidebar/modules/Cases.svg" /><span aria-hidden="true">Need assista...</span>
+                                                            </a>
+                                                            <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3DEditView%26record%3D169ea793-90b1-2ab5-9153-59e74f52592b" class="recent-links-edit"><span class=" glyphicon glyphicon-pencil"></span></a>
+                                                        </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                         </li>
+                                    
+                                                                    </ul>
+
+                                                            </div>
+            </div>
+        </div>
+        <div class="desktop-toolbar" id="toolbar">
+                            <ul class="nav navbar-nav">
+                    <li class="navbar-brand-container">
+                            <a class="navbar-brand with-home-icon" href="index.php?module=Home&amp;action=index">SuiteCRM</a>
+                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                    <li class="topnav">
+                                    <span class="currentTabLeft"> </span>
+                                    <span class="currentTab"><a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex" id="moduleTab_Tasks" module="Tasks">Tasks</a></span>
+                                    <span> </span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+
+                                                                                                                                                
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <ul>
+                                                                                                                                                                                                                                        <li><a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26return_module%3DTasks%26return_action%3DDetailView"><span class="topnav-fake-icon"></span><span aria-hidden="true">Create Task</span></a></li>
+                                                                                                                                                                                                                                                <li><a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26return_module%3DTasks%26return_action%3DDetailView"><span class="topnav-fake-icon"></span><span aria-hidden="true">View Tasks</span></a></li>
+                                                                                                                                                                                                                                                <li><a href="index.php?module=Import&amp;action=Step1&amp;import_module=Tasks&amp;return_module=Tasks&amp;return_action=index"><span class="topnav-fake-icon"></span><span aria-hidden="true">Import Tasks</span></a></li>
+                                                                                                                                                                                                                        </ul>
+                                            </li>
+
+                                                                                        
+                                                                                                                                                <li class="recent-links-title"><a><strong>Recently Viewed</strong></a></li>
+                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li>
+                                                    <ul>
+                                                                                                                
+                                                                                                                                                                                    <li class="recentlinks" role="presentation">
+                                                                    <a title="Tasks" accesskey="1" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DDetailView%26record%3D273fc4a4-565f-1e9e-efe5-59f36c5a8439" class="recent-links-detail">
+                                                                        <span aria-hidden="true">Desafio Dojo...</span>
+                                                                    </a>
+                                                                    <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26record%3D273fc4a4-565f-1e9e-efe5-59f36c5a8439" class="recent-links-edit"><span class=" glyphicon glyphicon-pencil"></span></a>
+                                                                </li>
+                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="recentlinks" role="presentation">
+                                                                    <a title="Tasks" accesskey="7" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DDetailView%26record%3D68527c63-bf3a-cd33-2f73-59f36e862408" class="recent-links-detail">
+                                                                        <span aria-hidden="true">Desafio Dojo 2</span>
+                                                                    </a>
+                                                                    <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26record%3D68527c63-bf3a-cd33-2f73-59f36e862408" class="recent-links-edit"><span class=" glyphicon glyphicon-pencil"></span></a>
+                                                                </li>
+                                                                
+                                                                                                                                                                                                                                                <li class="recentlinks" role="presentation">
+                                                                    <a title="Tasks" accesskey="8" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DDetailView%26record%3D289dabcd-7889-bb3a-eb83-59f36df08049" class="recent-links-detail">
+                                                                        <span aria-hidden="true">Desafio Dojo 2</span>
+                                                                    </a>
+                                                                    <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26record%3D289dabcd-7889-bb3a-eb83-59f36df08049" class="recent-links-edit"><span class=" glyphicon glyphicon-pencil"></span></a>
+                                                                </li>
+                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                                </li>
+
+
+
+
+
+                                            
+                                                                                        <li>
+                                                <ul>
+                                                                                                        
+                                                                                                    </ul>
+                                            </li>
+                                        </ul>
+
+                                                                     </li>
+                            
+                                                                                                                <li class="topnav">
+                            <span class="notCurrentTabLeft"> </span><span class="notCurrentTab">
+                            <a href="#" id="grouptab_0" class="dropdown-toggle grouptab" data-toggle="dropdown">Sales</a>
+                            <span class="notCurrentTabRight"> </span>
+                            <ul class="dropdown-menu" role="menu">
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DSales" id="moduleTab_6_Home" module="Home">Home</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAccounts%26action%3Dindex%26parentTab%3DSales" id="moduleTab_6_Accounts" module="Accounts">Accounts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DContacts%26action%3Dindex%26parentTab%3DSales" id="moduleTab_6_Contacts" module="Contacts">Contacts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DOpportunities%26action%3Dindex%26parentTab%3DSales" id="moduleTab_6_Opportunities" module="Opportunities">Opportunities</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DLeads%26action%3Dindex%26parentTab%3DSales" id="moduleTab_6_Leads" module="Leads">Leads</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DSales" id="moduleTab_6_Tasks" module="Tasks">Tasks</a>
+                                    </li>
+                                                                                            </ul>
+                        </span></li>
+                                                                    <li class="topnav">
+                            <span class="notCurrentTabLeft"> </span><span class="notCurrentTab">
+                            <a href="#" id="grouptab_1" class="dropdown-toggle grouptab" data-toggle="dropdown">Marketing</a>
+                            <span class="notCurrentTabRight"> </span>
+                            <ul class="dropdown-menu" role="menu">
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DMarketing" id="moduleTab_6_Home" module="Home">Home</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAccounts%26action%3Dindex%26parentTab%3DMarketing" id="moduleTab_6_Accounts" module="Accounts">Accounts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DContacts%26action%3Dindex%26parentTab%3DMarketing" id="moduleTab_6_Contacts" module="Contacts">Contacts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DLeads%26action%3Dindex%26parentTab%3DMarketing" id="moduleTab_6_Leads" module="Leads">Leads</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="index.php?module=Campaigns&amp;action=index&amp;parentTab=Marketing" id="moduleTab_6_Campaigns" module="Campaigns">Campaigns</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DProspects%26action%3Dindex%26parentTab%3DMarketing" id="moduleTab_6_Targets" module="Prospects">Targets</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DMarketing" id="moduleTab_6_Tasks" module="Tasks">Tasks</a>
+                                    </li>
+                                                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DProspectLists%26action%3Dindex%26parentTab%3DMarketing">Target Lists</a>
+                                    </li>
+                                                            </ul>
+                        </span></li>
+                                                                    <li class="topnav">
+                            <span class="notCurrentTabLeft"> </span><span class="notCurrentTab">
+                            <a href="#" id="grouptab_2" class="dropdown-toggle grouptab" data-toggle="dropdown">Support</a>
+                            <span class="notCurrentTabRight"> </span>
+                            <ul class="dropdown-menu" role="menu">
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DSupport" id="moduleTab_6_Home" module="Home">Home</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAccounts%26action%3Dindex%26parentTab%3DSupport" id="moduleTab_6_Accounts" module="Accounts">Accounts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DContacts%26action%3Dindex%26parentTab%3DSupport" id="moduleTab_6_Contacts" module="Contacts">Contacts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3Dindex%26parentTab%3DSupport" id="moduleTab_6_Cases" module="Cases">Cases</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DSupport" id="moduleTab_6_Tasks" module="Tasks">Tasks</a>
+                                    </li>
+                                                                                            </ul>
+                        </span></li>
+                                                                    <li class="topnav">
+                            <span class="notCurrentTabLeft"> </span><span class="notCurrentTab">
+                            <a href="#" id="grouptab_3" class="dropdown-toggle grouptab" data-toggle="dropdown">Activities</a>
+                            <span class="notCurrentTabRight"> </span>
+                            <ul class="dropdown-menu" role="menu">
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DActivities" id="moduleTab_6_Home" module="Home">Home</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="index.php?module=Calendar&amp;action=index&amp;parentTab=Activities" id="moduleTab_6_Calendar" module="Calendar">Calendar</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCalls%26action%3Dindex%26parentTab%3DActivities" id="moduleTab_6_Calls" module="Calls">Calls</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DMeetings%26action%3Dindex%26parentTab%3DActivities" id="moduleTab_6_Meetings" module="Meetings">Meetings</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="index.php?module=Emails&amp;action=index&amp;parentTab=Activities" id="moduleTab_6_Emails" module="Emails">Emails</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DActivities" id="moduleTab_6_Tasks" module="Tasks">Tasks</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DNotes%26action%3Dindex%26parentTab%3DActivities" id="moduleTab_6_Notes" module="Notes">Notes</a>
+                                    </li>
+                                                                                            </ul>
+                        </span></li>
+                                                                    <li class="topnav">
+                            <span class="notCurrentTabLeft"> </span><span class="notCurrentTab">
+                            <a href="#" id="grouptab_4" class="dropdown-toggle grouptab" data-toggle="dropdown">Collaboration</a>
+                            <span class="notCurrentTabRight"> </span>
+                            <ul class="dropdown-menu" role="menu">
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DCollaboration" id="moduleTab_6_Home" module="Home">Home</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="index.php?module=Emails&amp;action=index&amp;parentTab=Collaboration" id="moduleTab_6_Emails" module="Emails">Emails</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="index.php?module=Documents&amp;action=index&amp;parentTab=Collaboration" id="moduleTab_6_Documents" module="Documents">Documents</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="index.php?module=Project&amp;action=index&amp;parentTab=Collaboration" id="moduleTab_6_Projects" module="Project">Projects</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DCollaboration" id="moduleTab_6_Tasks" module="Tasks">Tasks</a>
+                                    </li>
+                                                                                            </ul>
+                        </span></li>
+                                                                    <li class="topnav all">
+                            <span class="notCurrentTabLeft"> </span><span class="notCurrentTab">
+                            <a href="#" id="grouptab_5" class="dropdown-toggle grouptab" data-toggle="dropdown">All</a>
+                            <span class="notCurrentTabRight"> </span>
+                            <ul class="dropdown-menu" role="menu">
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DHome%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Home" module="Home">Home</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAccounts%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Accounts" module="Accounts">Accounts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DContacts%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Contacts" module="Contacts">Contacts</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DOpportunities%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Opportunities" module="Opportunities">Opportunities</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DLeads%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Leads" module="Leads">Leads</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Quotes%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Quotes" module="AOS_Quotes">Quotes</a>
+                                    </li>
+                                                                    <li>
+                                                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26parentTab%3DAll" id="moduleTab_6_Tasks" module="Tasks">Tasks</a>
+                                    </li>
+                                                                                                    <li>
+                                        <a href="index.php?module=Calendar&amp;action=index&amp;parentTab=All">Calendar</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="index.php?module=Documents&amp;action=index&amp;parentTab=All">Documents</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="index.php?module=Emails&amp;action=index&amp;parentTab=All">Emails</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DSpots%26action%3Dindex%26parentTab%3DAll">Spots</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="index.php?module=Campaigns&amp;action=index&amp;parentTab=All">Campaigns</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCalls%26action%3Dindex%26parentTab%3DAll">Calls</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DMeetings%26action%3Dindex%26parentTab%3DAll">Meetings</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DNotes%26action%3Dindex%26parentTab%3DAll">Notes</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Invoices%26action%3Dindex%26parentTab%3DAll">Invoices</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Contracts%26action%3Dindex%26parentTab%3DAll">Contracts</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3Dindex%26parentTab%3DAll">Cases</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DProspects%26action%3Dindex%26parentTab%3DAll">Targets</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DProspectLists%26action%3Dindex%26parentTab%3DAll">Target Lists</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="index.php?module=Project&amp;action=index&amp;parentTab=All">Projects</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAM_ProjectTemplates%26action%3Dindex%26parentTab%3DAll">Project Templates</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DFP_events%26action%3Dindex%26parentTab%3DAll">Events</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DFP_Event_Locations%26action%3Dindex%26parentTab%3DAll">Locations</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Products%26action%3Dindex%26parentTab%3DAll">Products</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_Product_Categories%26action%3Dindex%26parentTab%3DAll">Product Categories</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOS_PDF_Templates%26action%3Dindex%26parentTab%3DAll">PDF Templates</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Maps%26action%3Dindex%26parentTab%3DAll">Maps</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Markers%26action%3Dindex%26parentTab%3DAll">Map Markers</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Areas%26action%3Dindex%26parentTab%3DAll">Map Areas</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3Djjwg_Address_Cache%26action%3Dindex%26parentTab%3DAll">Map Address Cache</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOR_Reports%26action%3Dindex%26parentTab%3DAll">Reports</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOW_WorkFlow%26action%3Dindex%26parentTab%3DAll">WorkFlow</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOK_KnowledgeBase%26action%3Dindex%26parentTab%3DAll">Knowledge Base</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DAOK_Knowledge_Base_Categories%26action%3Dindex%26parentTab%3DAll">KB Categories</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="index.php?module=EmailTemplates&amp;action=index&amp;parentTab=All">Email Templates</a>
+                                    </li>
+                                                            </ul>
+                        </span></li>
+                                    </ul>
+                            
+                <script>
+                  var windowResize = function() {
+                    // Since the height can be changed in Sass.
+                    // Take a measurement of the initial desktop navigation bar height with just one menu item
+                    $('.desktop-toolbar ul.navbar-nav &gt; li').not('.all').addClass('hidden');
+                    var dth = $('.desktop-toolbar').outerHeight();
+
+                    // Show all desktop menu items
+                    $('.desktop-toolbar ul.navbar-nav &gt; li.hidden').removeClass('hidden');
+
+                    // Remove the each menu item from the end of the toolbar until
+                    // the navigation bar is the matches the initial height.
+                    while($('.desktop-toolbar').outerHeight() &gt; dth) {
+                      ti = $('.desktop-toolbar ul.navbar-nav &gt; li').not('.hidden').not('.all');
+                      $(ti).last().addClass('hidden');
+                    }
+                  };
+                  $(window).resize(windowResize);
+                  $(document).ready(windowResize);
+                </script>
+            
+                    </div>
+
+        <!-- Right side of the main navigation -->
+        <div class="mobile-bar">
+            <ul id="toolbar" class="toolbar">
+                <li id="quickcreatetop" class="create dropdown nav navbar-nav quickcreatetop">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        CREATE
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="index.php?module=Accounts&amp;action=EditView&amp;return_module=Accounts&amp;return_action=DetailView">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Contacts&amp;action=EditView&amp;return_module=Contacts&amp;return_action=DetailView">Create Contact</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Opportunities&amp;action=EditView&amp;return_module=Opportunities&amp;return_action=DetailView">Create Opportunity</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Leads&amp;action=EditView&amp;return_module=Leads&amp;return_action=DetailView">Create Lead</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Documents&amp;action=EditView&amp;return_module=Documents&amp;return_action=DetailView">Create Document</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Calls&amp;action=EditView&amp;return_module=Calls&amp;return_action=DetailView">Log Call</a>
+                        </li>
+                        <li class="last">
+                            <a href="index.php?module=Tasks&amp;action=EditView&amp;return_module=Tasks&amp;return_action=DetailView">Create Task</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="" class="dropdown nav navbar-nav navbar-search">
+                    <button id="searchbutton" class="dropdown-toggle btn btn-default searchbutton" data-toggle="dropdown" aria-expanded="true">
+                        <!--<span class="glyphicon glyphicon-search"> </span>-->Search
+                    </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="searchbutton">
+                        <form id="searchformdropdown" class="searchformdropdown" name="UnifiedSearch" action="index.php" onsubmit="return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()">
+                            <input type="hidden" class="form-control" name="action" value="UnifiedSearch" />
+                            <input type="hidden" class="form-control" name="module" value="Home" />
+                            <input type="hidden" class="form-control" name="search_form" value="false" />
+                            <input type="hidden" class="form-control" name="advanced" value="false" />
+                            <div class="input-group">
+                                <input type="text" class="form-control query_string" name="query_string" id="query_string" placeholder="Search..." value="" />
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><!--<span class="glyphicon glyphicon-search"
+                                                                                    aria-hidden="true"></span>-->Search</button>
+                            </span>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li id="desktop_notifications" class="dropdown nav navbar-nav desktop_notifications">
+                    <button class="alertsButton btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="alert_count hidden">0</span>
+                    </button>
+                    <div id="alerts" class="dropdown-menu" role="menu" style="left: 32px;">This information is not available</div>
+                </li>
+                <li>
+                    <form id="searchform" class="navbar-form searchform" name="UnifiedSearch" action="index.php" onsubmit="return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()">
+                        <input type="hidden" class="form-control" name="action" value="UnifiedSearch" />
+                        <input type="hidden" class="form-control" name="module" value="Home" />
+                        <input type="hidden" class="form-control" name="search_form" value="false" />
+                        <input type="hidden" class="form-control" name="advanced" value="false" />
+                        <div class="input-group">
+                            <input type="text" class="form-control query_string" name="query_string" id="query_string" placeholder="Search..." value="" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><!--<span class="glyphicon glyphicon-search"
+                                                                            aria-hidden="true"></span>-->Search</button>
+                    </span>
+                        </div>
+                    </form>
+                </li>
+                <li id="globalLinks" class="dropdown nav navbar-nav globalLinks-mobile">
+
+                    <button id="usermenucollapsed" class="dropdown-toggle btn btn-default usermenucollapsed" data-toggle="dropdown" aria-expanded="true">
+                    </button>
+                    <ul class="dropdown-menu user-dropdown" role="menu" aria-labelledby="dropdownMenu2">
+                        <li role="presentation">
+                            <a href="index.php?module=Users&amp;action=EditView&amp;record=seed_will_id">
+                                Profile
+                            </a>
+                        </li>
+                                                    <li role="presentation">
+                                <a id="employees_link" href="index.php?module=Employees&amp;action=index&amp;query=true">Employees</a>
+                            </li>
+                                                    <li role="presentation">
+                                <a id="training_link" href="javascript:void(0)" onclick="void(window.open('http://suitecrm.com/forum/index'))">Support Forum</a>
+                            </li>
+                                                    <li role="presentation">
+                                <a id="about_link" href="index.php?module=Home&amp;action=About">About</a>
+                            </li>
+                                                <li role="presentation"><a role="menuitem" id="logout_link" href="index.php?module=Users&amp;action=Logout" class="utilsLink">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="tablet-bar">
+            <ul id="toolbar" class="toolbar">
+                <li id="quickcreatetop" class="create dropdown nav navbar-nav quickcreatetop">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        CREATE
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="index.php?module=Accounts&amp;action=EditView&amp;return_module=Accounts&amp;return_action=DetailView">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Contacts&amp;action=EditView&amp;return_module=Contacts&amp;return_action=DetailView">Create Contact</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Opportunities&amp;action=EditView&amp;return_module=Opportunities&amp;return_action=DetailView">Create Opportunity</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Leads&amp;action=EditView&amp;return_module=Leads&amp;return_action=DetailView">Create Lead</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Documents&amp;action=EditView&amp;return_module=Documents&amp;return_action=DetailView">Create Document</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Calls&amp;action=EditView&amp;return_module=Calls&amp;return_action=DetailView">Log Call</a>
+                        </li>
+                        <li class="last">
+                            <a href="index.php?module=Tasks&amp;action=EditView&amp;return_module=Tasks&amp;return_action=DetailView">Create Task</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="" class="dropdown nav navbar-nav navbar-search">
+                    <button id="searchbutton" class="dropdown-toggle btn btn-default searchbutton" data-toggle="dropdown" aria-expanded="true">
+                        <!--<span class="glyphicon glyphicon-search"> </span>-->Search
+                    </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="searchbutton">
+                        <form id="searchformdropdown" class="searchformdropdown" name="UnifiedSearch" action="index.php" onsubmit="return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()">
+                            <input type="hidden" class="form-control" name="action" value="UnifiedSearch" />
+                            <input type="hidden" class="form-control" name="module" value="Home" />
+                            <input type="hidden" class="form-control" name="search_form" value="false" />
+                            <input type="hidden" class="form-control" name="advanced" value="false" />
+                            <div class="input-group">
+                                <input type="text" class="form-control query_string" name="query_string" id="query_string" placeholder="Search..." value="" />
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><!--<span class="glyphicon glyphicon-search"
+                                                                                    aria-hidden="true"></span>-->Search</button>
+                            </span>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <form id="searchform" class="navbar-form searchform" name="UnifiedSearch" action="index.php" onsubmit="return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()">
+                        <input type="hidden" class="form-control" name="action" value="UnifiedSearch" />
+                        <input type="hidden" class="form-control" name="module" value="Home" />
+                        <input type="hidden" class="form-control" name="search_form" value="false" />
+                        <input type="hidden" class="form-control" name="advanced" value="false" />
+                        <div class="input-group">
+                            <input type="text" class="form-control query_string" name="query_string" id="query_string" placeholder="Search..." value="" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><!--<span class="glyphicon glyphicon-search"
+                                                                            aria-hidden="true"></span>-->Search</button>
+                    </span>
+                        </div>
+                    </form>
+                </li>
+                <li id="desktop_notifications" class="dropdown nav navbar-nav desktop_notifications">
+                    <button class="alertsButton btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="alert_count hidden">0</span>
+                    </button>
+                    <div id="alerts" class="dropdown-menu" role="menu">This information is not available</div>
+                </li>
+                <li id="globalLinks" class="dropdown nav navbar-nav globalLinks-mobile">
+
+                    <button id="usermenucollapsed" class="dropdown-toggle btn btn-default usermenucollapsed" data-toggle="dropdown" aria-expanded="true">
+                    </button>
+                    <ul class="dropdown-menu user-dropdown" role="menu" aria-labelledby="dropdownMenu2">
+                        <li role="presentation">
+                            <a href="index.php?module=Users&amp;action=EditView&amp;record=seed_will_id">
+                                Profile
+                            </a>
+                        </li>
+                                                    <li role="presentation">
+                                <a id="employees_link" href="index.php?module=Employees&amp;action=index&amp;query=true">Employees</a>
+                            </li>
+                                                    <li role="presentation">
+                                <a id="training_link" href="javascript:void(0)" onclick="void(window.open('http://suitecrm.com/forum/index'))">Support Forum</a>
+                            </li>
+                                                    <li role="presentation">
+                                <a id="about_link" href="index.php?module=Home&amp;action=About">About</a>
+                            </li>
+                                                <li role="presentation"><a role="menuitem" id="logout_link" href="index.php?module=Users&amp;action=Logout" class="utilsLink">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="desktop-bar">
+            <ul id="toolbar" class="toolbar">
+                <li id="quickcreatetop" class="create dropdown nav navbar-nav quickcreatetop">
+                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        CREATE
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="index.php?module=Accounts&amp;action=EditView&amp;return_module=Accounts&amp;return_action=DetailView">Create Account</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Contacts&amp;action=EditView&amp;return_module=Contacts&amp;return_action=DetailView">Create Contact</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Opportunities&amp;action=EditView&amp;return_module=Opportunities&amp;return_action=DetailView">Create Opportunity</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Leads&amp;action=EditView&amp;return_module=Leads&amp;return_action=DetailView">Create Lead</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Documents&amp;action=EditView&amp;return_module=Documents&amp;return_action=DetailView">Create Document</a>
+                        </li>
+                        <li>
+                            <a href="index.php?module=Calls&amp;action=EditView&amp;return_module=Calls&amp;return_action=DetailView">Log Call</a>
+                        </li>
+                        <li class="last">
+                            <a href="index.php?module=Tasks&amp;action=EditView&amp;return_module=Tasks&amp;return_action=DetailView">Create Task</a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="" class="dropdown nav navbar-nav navbar-search">
+                    <button id="searchbutton" class="dropdown-toggle btn btn-default searchbutton" data-toggle="dropdown" aria-expanded="true">
+                        <!--<span class="glyphicon glyphicon-search"> </span>-->Search
+                    </button>
+                    <div class="dropdown-menu" role="menu" aria-labelledby="searchbutton">
+                        <form id="searchformdropdown" class="searchformdropdown" name="UnifiedSearch" action="index.php" onsubmit="return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()">
+                            <input type="hidden" class="form-control" name="action" value="UnifiedSearch" />
+                            <input type="hidden" class="form-control" name="module" value="Home" />
+                            <input type="hidden" class="form-control" name="search_form" value="false" />
+                            <input type="hidden" class="form-control" name="advanced" value="false" />
+                            <div class="input-group">
+                                <input type="text" class="form-control query_string" name="query_string" id="query_string" placeholder="Search..." value="" />
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default"><!--<span class="glyphicon glyphicon-search"
+                                                                                    aria-hidden="true"></span>-->Search</button>
+                            </span>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+                <li>
+                    <form id="searchform" class="navbar-form searchform" name="UnifiedSearch" action="index.php" onsubmit="return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()">
+                        <input type="hidden" class="form-control" name="action" value="UnifiedSearch" />
+                        <input type="hidden" class="form-control" name="module" value="Home" />
+                        <input type="hidden" class="form-control" name="search_form" value="false" />
+                        <input type="hidden" class="form-control" name="advanced" value="false" />
+                        <div class="input-group">
+                            <input type="text" class="form-control query_string" name="query_string" id="query_string" placeholder="Search..." value="" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><!--<span class="glyphicon glyphicon-search"
+                                                                            aria-hidden="true"></span>-->Search</button>
+                    </span>
+                        </div>
+                    </form>
+                </li>
+                <li id="desktop_notifications" class="dropdown nav navbar-nav desktop_notifications">
+                    <button class="alertsButton btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="alert_count hidden">0</span>
+                    </button>
+                    <div id="alerts" class="dropdown-menu" role="menu">This information is not available</div>
+                </li>
+                <li id="globalLinks" class="dropdown nav navbar-nav globalLinks-desktop">
+
+                    <button id="usermenucollapsed" class="dropdown-toggle btn btn-default usermenucollapsed" data-toggle="dropdown" aria-expanded="true">
+                    </button>
+
+                    <button id="with-label" class="dropdown-toggle with-label" data-toggle="dropdown" aria-expanded="true">
+                        <span class="user_icon"> </span>
+                        <span class="user_label">Will Westin</span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu user-dropdown" role="menu" aria-labelledby="dropdownMenu2">
+                        <li role="presentation">
+                            <a href="index.php?module=Users&amp;action=EditView&amp;record=seed_will_id">
+                                Profile
+                            </a>
+                        </li>
+                                                    <li role="presentation">
+                                <a id="employees_link" href="index.php?module=Employees&amp;action=index&amp;query=true">Employees</a>
+                            </li>
+                                                    <li role="presentation">
+                                <a id="training_link" href="javascript:void(0)" onclick="void(window.open('http://suitecrm.com/forum/index'))">Support Forum</a>
+                            </li>
+                                                    <li role="presentation">
+                                <a id="about_link" href="index.php?module=Home&amp;action=About">About</a>
+                            </li>
+                                                <li role="presentation"><a role="menuitem" id="logout_link" href="index.php?module=Users&amp;action=Logout" class="utilsLink">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+</div></nav>
+<!--End Responsive Top Navigation Menu -->
+    <!--Start Page Container and Responsive Sidebar -->
+    <div id="sidebar_container" class="container-fluid sidebar_container">
+
+        <a id="buttontoggle" class="buttontoggle button-toggle-expanded"><span></span></a>
+                
+        <!--<div class="row">-->
+            <!--<div                  class="col-sm-3 col-md-2 sidebar">-->
+             <div class="sidebar">
+                
+                <div id="actionMenuSidebar" class="actionMenuSidebar">
+                                                                                                                                                                                                                                                                                                                                                <ul>
+                                                                    <h2 class="recent_h3">ACTIONS</h2>
+                                                                                                                        <li class="actionmenulinks" role="presentation">
+                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26return_module%3DTasks%26return_action%3DDetailView">
+                                                    <div class="side-bar-Create side-bar-action-icon"></div>
+                                                    <div class="actionmenulink">Create Task</div>
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="actionmenulinks" role="presentation">
+                                                <a href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3Dindex%26return_module%3DTasks%26return_action%3DDetailView">
+                                                    <div class="side-bar-List side-bar-action-icon"></div>
+                                                    <div class="actionmenulink">View Tasks</div>
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="actionmenulinks" role="presentation">
+                                                <a href="index.php?module=Import&amp;action=Step1&amp;import_module=Tasks&amp;return_module=Tasks&amp;return_action=index">
+                                                    <div class="side-bar-Import side-bar-action-icon"></div>
+                                                    <div class="actionmenulink">Import Tasks</div>
+                                                </a>
+                                            </li>
+                                                                                                                                        </ul>
+                                                            </div>
+                
+                <div id="recentlyViewedSidebar" class="recentlyViewedSidebar">
+                                    <h2 class="recent_h3">Recently Viewed</h2>
+                                    <ul class="nav nav-pills nav-stacked">
+                                                                                <div class="recently_viewed_link_container_sidebar">
+                                <li class="recentlinks" role="presentation">
+                                    <a title="Tasks" accesskey="1" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DDetailView%26record%3D273fc4a4-565f-1e9e-efe5-59f36c5a8439" class="recent-links-detail">
+                                        <img src="themes/SuiteP/images/sidebar/modules/Tasks.svg" /><span>Desafio Dojo...</span>
+                                    </a>
+                                </li>
+                            </div>
+                                                                                                            <div class="recently_viewed_link_container_sidebar">
+                                <li class="recentlinks" role="presentation">
+                                    <a title="Cases" accesskey="2" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3DDetailView%26record%3D3aa0df1e-3876-d7d6-f295-59f371e0b71a" class="recent-links-detail">
+                                        <img src="themes/SuiteP/images/sidebar/modules/Cases.svg" /><span>Thats a case 1</span>
+                                    </a>
+                                </li>
+                            </div>
+                                                                                                            <div class="recently_viewed_link_container_sidebar">
+                                <li class="recentlinks" role="presentation">
+                                    <a title="Cases" accesskey="3" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCases%26action%3DDetailView%26record%3D169ea793-90b1-2ab5-9153-59e74f52592b" class="recent-links-detail">
+                                        <img src="themes/SuiteP/images/sidebar/modules/Cases.svg" /><span>Need assista...</span>
+                                    </a>
+                                </li>
+                            </div>
+                                                                                                            <div class="recently_viewed_link_container_sidebar">
+                                <li class="recentlinks" role="presentation">
+                                    <a title="Contacts" accesskey="4" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DContacts%26action%3DDetailView%26record%3D10de6731-5fbf-a20d-4565-59e74ff66205" class="recent-links-detail">
+                                        <img src="themes/SuiteP/images/sidebar/modules/Contacts.svg" /><span>Rod Sensabaugh</span>
+                                    </a>
+                                </li>
+                            </div>
+                                                                                                            <div class="recently_viewed_link_container_sidebar">
+                                <li class="recentlinks" role="presentation">
+                                    <a title="Calls" accesskey="5" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DCalls%26action%3DDetailView%26record%3D2d5d0251-992e-6f0b-653f-59e74f59c10a" class="recent-links-detail">
+                                        <img src="themes/SuiteP/images/sidebar/modules/Calls.svg" /><span>Bad time, wi...</span>
+                                    </a>
+                                </li>
+                            </div>
+                                                                                                                                                                                                                                                                                                                                            </ul>
+                </div>
+     
+                <div id="favoritesSidebar" class="favoritesSidebar">
+                                    <ul class="nav nav-pills nav-stacked">
+                                            </ul>
+                </div>
+            </div>
+        <!--</div>-->
+    </div>
+    <!--End Responsive Sidebar -->
+<!--Start Page content -->    </div>
+
+    <iframe id="ajaxUI-history-iframe" src="index.php?entryPoint=getImage&amp;imageName=blank.png" title="empty" style="display:none"></iframe>
+<input id="ajaxUI-history-field" type="hidden" />
+<script type="text/javascript">
+    if (SUGAR.ajaxUI &amp;&amp; !SUGAR.ajaxUI.hist_loaded) {
+        YAHOO.util.History.register('ajaxUILoc', "", SUGAR.ajaxUI.go);
+                YAHOO.util.History.initialize("ajaxUI-history-field", "ajaxUI-history-iframe");
+        
+    }
+</script>
+
+<!-- Start of page content -->
+<div id="bootstrap-container" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main bootstrap-container expandedSidebar">
+    <div id="content" class="content">
+        <div id="pagecontent" class=".pagecontent">
+<div class="moduleTitle">
+<h2 class="module-title-text"> Desafio Dojo teste </h2><div class="favorite" record_id="273fc4a4-565f-1e9e-efe5-59f36c5a8439" module="Tasks"><div class="favorite_icon_outline"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="48" height="48" viewBox="0 0 48 48.000001" id="svg2" version="1.1" inkscape:version="0.91 r" sodipodi:docname="favorite-star-outline.svg">
+  <defs id="defs4"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="12.079741" inkscape:cx="-9.9588233" inkscape:cy="34.284452" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" units="px" inkscape:window-width="1920" inkscape:window-height="1015" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1"/>
+  <metadata id="metadata7">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-1004.3622)">
+    <path sodipodi:type="star" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#98aab8;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path3344" sodipodi:sides="5" sodipodi:cx="23.916967" sodipodi:cy="1030.5367" sodipodi:r1="23.539249" sodipodi:r2="10.822688" sodipodi:arg1="0.95427557" sodipodi:arg2="1.5529309" inkscape:flatsided="false" inkscape:rounded="-0.0089966" inkscape:randomized="0" d="m 37.527361,1049.7423 c 0.113641,-0.086 -13.559381,-8.3863 -13.417052,-8.3846 0.147293,0 -14.3737694,7.9737 -14.2530699,8.0581 0.1166318,0.082 3.7857439,-15.4872 3.8281289,-15.3513 0.04386,0.1406 -12.0251754,-11.2063 -12.0681838,-11.0654 -0.041559,0.1361 15.8990998,-1.1854 15.7829648,-1.1031 -0.120184,0.085 6.941803,-14.8995 6.794523,-14.8969 -0.142317,0 6.04044,14.7547 5.92628,14.6697 -0.118141,-0.088 16.315445,1.9978 16.267429,1.8585 -0.0464,-0.1345 -12.165902,10.3043 -12.120322,10.1694 0.04717,-0.1395 3.141697,16.1343 3.259302,16.0456 z" inkscape:transform-center-x="0.025397516" inkscape:transform-center-y="-1.5673532"/>
+  </g>
+</svg>
+</div>
+                                                    <div class="favorite_icon_fill" style="display: none;"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?-->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="48" height="48" viewBox="0 0 48 48.000001" id="svg2" version="1.1" inkscape:version="0.91 r" sodipodi:docname="fav_selected.svg">
+  <defs id="defs4"/>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="12.079741" inkscape:cx="-3.4189478" inkscape:cy="27.661793" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" units="px" inkscape:window-width="1920" inkscape:window-height="1015" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1"/>
+  <metadata id="metadata7">
+    <rdf:rdf>
+      <cc:work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:work>
+    </rdf:rdf>
+  </metadata>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-1004.3622)">
+    <path sodipodi:type="star" style="fill:#f0837f;fill-opacity:1;fill-rule:evenodd;stroke:#f0837f;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" id="path3344" sodipodi:sides="5" sodipodi:cx="23.916967" sodipodi:cy="1030.5368" sodipodi:r1="23.539249" sodipodi:r2="10.739919" sodipodi:arg1="0.95427557" sodipodi:arg2="1.5527932" inkscape:flatsided="false" inkscape:rounded="-0.0089966" inkscape:randomized="0" d="m 37.527361,1049.7423 c 0.113945,-0.086 -13.559777,-8.4691 -13.417052,-8.4674 0.147661,0 -14.3740825,8.0563 -14.2530699,8.1409 0.1169676,0.082 3.8643569,-15.5132 3.9068599,-15.3769 0.04397,0.141 -12.1038185,-11.181 -12.1469148,-11.0398 -0.041656,0.1365 15.9480808,-1.1186 15.8316238,-1.0361 -0.120485,0.085 6.893511,-14.9665 6.745864,-14.9639 -0.142713,0 5.992099,14.8219 5.877622,14.7366 -0.118437,-0.088 16.364242,1.9312 16.316087,1.7916 -0.04655,-0.1349 -12.24476,10.2791 -12.199053,10.1438 0.04729,-0.1399 3.220146,16.1601 3.338033,16.0712 z" inkscape:transform-center-x="0.025397516" inkscape:transform-center-y="-1.5673532"/>
+  </g>
+</svg>
+</div></div><span class="utils"> 
+<a id="create_image" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26return_module%3DTasks%26return_action%3DDetailView" class="utilsLink">
+<img src="themes/default/images/create-record.gif?v=prtr747ZDllDCQrg6pfcIA" alt="Create" /></a>
+<a id="create_link" href="?action=ajaxui#ajaxUILoc=index.php%3Fmodule%3DTasks%26action%3DEditView%26return_module%3DTasks%26return_action%3DDetailView" class="utilsLink">
+Create
+</a></span><div class="clear"></div></div>
+<script language="javascript">
+    
+    SUGAR.util.doWhen(function () {
+        return $("#contentTable").length == 0;
+    }, SUGAR.themes.actionMenu);
+    
+</script>
+<table cellpadding="0" cellspacing="0" border="0" width="100%" id="">
+<tbody><tr>
+<td class="buttons" align="left" nowrap="" width="80%">
+<div class="actionsContainer">
+<form action="index.php" method="post" name="DetailView" id="formDetailView">
+<input type="hidden" name="module" value="Tasks" />
+<input type="hidden" name="record" value="273fc4a4-565f-1e9e-efe5-59f36c5a8439" />
+<input type="hidden" name="return_action" />
+<input type="hidden" name="return_module" />
+<input type="hidden" name="return_id" />
+<input type="hidden" name="module_tab" />
+<input type="hidden" name="isDuplicate" value="false" />
+<input type="hidden" name="offset" value="1" />
+<input type="hidden" name="action" value="EditView" />
+<input type="hidden" name="sugar_body_only" />
+<input type="hidden" name="isSaveAndNew" />
+<input type="hidden" name="status" value="" />
+<input type="hidden" name="isSave" />
+</form>
+</div>
+</td>
+<td align="right" width="20%" class="buttons">
+</td>
+</tr>
+</tbody></table>
+<div class="detail-view">
+<div class="mobile-pagination"></div>
+<ul class="nav nav-tabs">
+<li role="presentation" class="active">
+<a id="tab0" data-toggle="tab" class="hidden-xs">
+TASK OVERVIEW
+</a>
+<a id="xstab0" href="#" class="visible-xs first-tab-xs dropdown-toggle" data-toggle="dropdown">
+TASK OVERVIEW
+</a>
+<ul id="first-tab-menu-xs" class="dropdown-menu">
+<li role="presentation">
+<a id="tab1" data-toggle="tab" onclick="changeFirstTab(this, 'tab-content-1');">
+TASK OVERVIEW
+</a>
+</li>
+<li role="presentation">
+<a id="tab2" data-toggle="tab" onclick="changeFirstTab(this, 'tab-content-2');">
+OTHER
+</a>
+</li>
+</ul>
+</li>
+<li role="presentation" class="hidden-xs">
+<a id="tab1" data-toggle="tab">
+OTHER
+</a>
+</li>
+<li id="tab-actions" class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">ACTIONS</a>
+<ul class="dropdown-menu">
+<li><input title="Edit" accesskey="i" class="button primary" onclick="var _form = document.getElementById('formDetailView'); _form.return_module.value='Tasks'; _form.return_action.value='DetailView'; _form.return_id.value='273fc4a4-565f-1e9e-efe5-59f36c5a8439'; _form.action.value='EditView';SUGAR.ajaxUI.submitForm(_form);" type="button" name="Edit" id="edit_button" value="Edit" /> </li>
+<li><input title="Duplicate" accesskey="u" class="button" onclick="var _form = document.getElementById('formDetailView'); _form.return_module.value='Tasks'; _form.return_action.value='DetailView'; _form.isDuplicate.value=true; _form.action.value='EditView'; _form.return_id.value='273fc4a4-565f-1e9e-efe5-59f36c5a8439';SUGAR.ajaxUI.submitForm(_form);" type="button" name="Duplicate" value="Duplicate" id="duplicate_button" /> </li>
+<li><input title="Delete" accesskey="d" class="button" onclick="var _form = document.getElementById('formDetailView'); _form.return_module.value='Tasks'; _form.return_action.value='ListView'; _form.action.value='Delete'; if(confirm('Are you sure you want to delete this record?')) SUGAR.ajaxUI.submitForm(_form); return false;" type="submit" name="Delete" value="Delete" id="delete_button" /> </li>
+<li><input title="Close and Create New" class="button" onclick="var _form = document.getElementById('formDetailView');_form.action.value='Save'; _form.return_module.value='Tasks'; _form.isDuplicate.value=true; _form.isSaveAndNew.value=true; _form.return_action.value='EditView'; _form.isDuplicate.value=true; _form.return_id.value='273fc4a4-565f-1e9e-efe5-59f36c5a8439';_form.submit();" name="button" id="close_and_create_new_button" type="button" value="Close and Create New" /></li>
+<li><input title="Close" class="button" onclick="var _form = document.getElementById('formDetailView');_form.status.value='Completed'; _form.action.value='Save';_form.return_module.value='Tasks';_form.isSave.value=true;_form.return_action.value='DetailView'; _form.return_id.value='273fc4a4-565f-1e9e-efe5-59f36c5a8439';_form.submit();" name="button1" id="close_button" type="button" value="Close" /></li>
+<li></li>
+</ul>        </li>
+<li class="tab-inline-pagination">
+</li>
+</ul>
+<div class="clearfix"></div>
+<div class="tab-content">
+<div class="tab-pane-NOBOOTSTRAPTOGGLER active fade in" id="tab-content-0">
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-1-label">
+Subject:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field inlineEdit" type="name" field="name">
+<span class="sugar_field" id="name">Desafio Dojo teste</span>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-2-label">
+Status:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field inlineEdit" type="enum" field="status">
+<input type="hidden" class="sugar_field" id="status" value="In Progress" />
+In Progress
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-1-label">
+Start Date:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field inlineEdit" type="datetimecombo" field="date_start">
+<span class="sugar_field" id="date_start"></span>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-2-label">
+Accounts
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field inlineEdit" type="parent" field="parent_name">
+<input type="hidden" class="sugar_field" id="parent_name" value="" />
+<input type="hidden" class="sugar_field" id="parent_id" value="" />
+<a href="index.php?module=Accounts&amp;action=DetailView&amp;record=" class="tabDetailViewDFLink"></a>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-1-label">
+Due Date:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field inlineEdit" type="datetimecombo" field="date_due">
+<span class="sugar_field" id="date_due"></span>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-2-label">
+Contact:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field inlineEdit" type="relate" field="contact_name">
+<span id="contact_id" class="sugar_field" data-id-value=""></span>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-12 detail-view-row-item">
+<div class="col-xs-12 col-sm-2 label col-1-label">
+Priority:
+</div>
+<div class="col-xs-12 col-sm-10 detail-view-field inlineEdit" type="enum" field="priority" colspan="3">
+<input type="hidden" class="sugar_field" id="priority" value="High" />
+High
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-12 detail-view-row-item">
+<div class="col-xs-12 col-sm-2 label col-1-label">
+Description:
+</div>
+<div class="col-xs-12 col-sm-10 detail-view-field inlineEdit" type="text" field="description" colspan="3">
+<span class="sugar_field" id="description"></span>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-pane-NOBOOTSTRAPTOGGLER fade" id="tab-content-1">
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-12 detail-view-row-item">
+<div class="col-xs-12 col-sm-2 label col-1-label">
+Assigned to:
+</div>
+<div class="col-xs-12 col-sm-10 detail-view-field inlineEdit" type="relate" field="assigned_user_name" colspan="3">
+<span id="assigned_user_id" class="sugar_field" data-id-value="seed_will_id">Will Westin</span>
+</div>
+<div class="inlineEditIcon col-xs-hidden">
+<!--?xml-stylesheet type="text/css" href="../css/style.css" ?-->
+<!--?xml-stylesheet type="text/css" href="../css/colourSelector.php" ?-->
+<svg version="1.1" id="inline_edit_icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="15px" height="15px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g class="icon" id="Icon_6_">
+<g>
+<path class="icon" d="M64,368v80h80l235.727-235.729l-79.999-79.998L64,368z M441.602,150.398&#10;c8.531-8.531,8.531-21.334,0-29.865l-50.135-50.135c-8.531-8.531-21.334-8.531-29.865,0l-39.468,39.469l79.999,79.998&#10;L441.602,150.398z"/>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+<div class="row detail-view-row">
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-1-label">
+Date Created:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field " type="datetime" field="date_entered">
+<span id="date_entered" class="sugar_field">10/27/2017 06:26pm by Will Westin</span>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 detail-view-row-item">
+<div class="col-xs-12 col-sm-4 label col-2-label">
+Date Modified:
+</div>
+<div class="col-xs-12 col-sm-8 detail-view-field " type="datetime" field="date_modified">
+<span id="date_modified" class="sugar_field">10/27/2017 06:49pm by Will Westin</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel-content">
+<div> </div>
+</div>
+</div>
+
+<script>SUGAR.util.doWhen("document.getElementById('form') != null",
+        function(){SUGAR.util.buildAccessKeyLabels();});
+</script>            <script type="text/javascript" src="include/InlineEditing/inlineEditing.js"></script>
+<script type="text/javascript" src="modules/Favorites/favorites.js"></script>
+<script type="text/javascript">
+
+                    var selectTabDetailView = function(tab) {
+                        $('#content div.tab-content div.tab-pane-NOBOOTSTRAPTOGGLER').hide();
+                        $('#content div.tab-content div.tab-pane-NOBOOTSTRAPTOGGLER').eq(tab).show().addClass('active').addClass('in');
+                    };
+
+                    var selectTabOnError = function(tab) {
+                        selectTabDetailView(tab);
+                        $('#content ul.nav.nav-tabs &gt; li').removeClass('active');
+                        $('#content ul.nav.nav-tabs &gt; li a').css('color', '');
+
+                        $('#content ul.nav.nav-tabs &gt; li').eq(tab).find('a').first().css('color', 'red');
+                        $('#content ul.nav.nav-tabs &gt; li').eq(tab).addClass('active');
+
+                    };
+
+                    var selectTabOnErrorInputHandle = function(inputHandle) {
+                        var tab = $(inputHandle).closest('.tab-pane-NOBOOTSTRAPTOGGLER').attr('id').match(/^detailpanel_(.*)$/)[1];
+                        selectTabOnError(tab);
+                    };
+
+
+                    $(function(){
+                        $('#content ul.nav.nav-tabs &gt; li &gt; a[data-toggle="tab"]').click(function(e){
+                            if(typeof $(this).parent().find('a').first().attr('id') != 'undefined') {
+                                var tab = parseInt($(this).parent().find('a').first().attr('id').match(/^tab(.)*$/)[1]);
+                                selectTabDetailView(tab);
+                            }
+                        });
+                    });
+
+                </script><script>secondsSinceLoad = 0; alertList = [];		if (!alertsTimeoutId) {
+		    checkAlerts();
+		}
+</script><br />
+
+<script type="text/javascript" src="include/SubPanel/SubPanelTiles.js?v=prtr747ZDllDCQrg6pfcIA"></script>
+
+<ul class="noBullet" id="subpanel_list">
+    <li class="noBullet" id="whole_subpanel_history">
+        
+        <div class="panel panel-default sub-panel">
+            <div class="panel-heading panel-heading-collapse">
+
+                            <a id="subpanel_title_history" class="collapsed" role="button" data-toggle="collapse" href="#subpanel_history" aria-expanded="false">
+                                <div class="col-xs-10 col-sm-11 col-md-11">
+                        <div>
+                                                                                        <img src="themes/SuiteP/images/sub_panel/History.svg" />
+                                                        Notes
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+                            <div class="panel-body panel-collapse collapse" id="subpanel_history">
+                                <div class="tab-content">
+                        <div id="list_subpanel_history">
+                            <script>
+                function select_dialog() {
+                	var $dialog = $('&lt;div&gt;&lt;/div&gt;')
+					.html('&lt;a style=\'width: 150px\' name="thispage" class=\'menuItem\' onmouseover=\'hiliteItem(this,"yes");\' onmouseout=\'unhiliteItem(this);\' onclick=\'if (document.MassUpdate.select_entire_list.value==1){document.MassUpdate.select_entire_list.value=0;sListView.check_all(document.MassUpdate, "mass[]", true, 10)}else {sListView.check_all(document.MassUpdate, "mass[]", true)};\' href=\'javascript:void(0)\'&gt;Select This Page&amp;nbsp;&amp;#x28;10&amp;#x29;&amp;#x200E;&lt;/a&gt;&lt;a style=\'width: 150px\' name="selectall" class=\'menuItem\' onmouseover=\'hiliteItem(this,"yes");\' onmouseout=\'unhiliteItem(this);\' onclick=\'sListView.check_entire_list(document.MassUpdate, "mass[]",true,0);\' href=\'javascript:void(0)\'&gt;Select All&amp;nbsp;&amp;#x28;0&amp;#x29;&amp;#x200E;&lt;/a&gt;&lt;a style=\'width: 150px\' name="deselect" class=\'menuItem\' onmouseover=\'hiliteItem(this,"yes");\' onmouseout=\'unhiliteItem(this);\' onclick=\'sListView.clear_all(document.MassUpdate, "mass[]", false);\' href=\'javascript:void(0)\'&gt;Deselect All&lt;/a&gt;')
+					.dialog({
+						autoOpen: false,
+						width: 150
+					});
+					$dialog.dialog('open');
+
+                }
+                </script><input type="hidden" name="show_plus" value="" />
+<table cellpadding="0" cellspacing="0" border="0" class="list view table-responsive subpanel-table footable footable-1 breakpoint-lg" data-empty="No results found." data-breakpoints="{ &quot;xs&quot;: 754, &quot;sm&quot;: 750, &quot;md&quot;: 768, &quot;lg&quot;: 992}" style="display: table;">
+    <thead>
+        <tr class="footable-header">
+            
+            
+                                                                                
+                
+                                
+                
+                                                                                
+                
+                                
+                
+                                            
+                                                    
+                                
+                
+                                            
+                                                    
+                                
+                
+                                            
+                                                    
+                                
+                
+                                            
+                
+                                                                    
+                
+                        
+        <th data-type="html" style="display: table-cell;"><!-- extra th for the plus button --> </th><th data-breakpoints="" data-type="html" style="display: table-cell;"> </th><th data-breakpoints="" data-type="html" style="display: table-cell;"><a class="listViewThLinkS1" href="javascript:showSubPanel('history','/index.php?action=DetailView&amp;module=Tasks&amp;record=273fc4a4-565f-1e9e-efe5-59f36c5a8439&amp;return_module=Tasks&amp;return_action=DetailView&amp;offset=1&amp;Tasks_history_CELL_offset=&amp;inline=true&amp;to_pdf=true&amp;action=SubPanelViewer&amp;subpanel=history&amp;Tasks_history_CELL_ORDER_BY=name&amp;layout_def_key=Tasks',true);">Subject  <img border="0" src="themes/SuiteP/images/arrow.png?v=prtr747ZDllDCQrg6pfcIA" width="8" height="10" align="absmiddle" alt="Sort" /></a></th><th data-breakpoints="xs sm" data-type="html" style="display: table-cell;">Contact</th><th data-breakpoints="xs sm" data-type="html" style="display: table-cell;"><a class="listViewThLinkS1" href="javascript:showSubPanel('history','/index.php?action=DetailView&amp;module=Tasks&amp;record=273fc4a4-565f-1e9e-efe5-59f36c5a8439&amp;return_module=Tasks&amp;return_action=DetailView&amp;offset=1&amp;Tasks_history_CELL_offset=&amp;inline=true&amp;to_pdf=true&amp;action=SubPanelViewer&amp;subpanel=history&amp;Tasks_history_CELL_ORDER_BY=date_modified&amp;layout_def_key=Tasks',true);">Last Modified  <img border="0" src="themes/SuiteP/images/arrow.png?v=prtr747ZDllDCQrg6pfcIA" width="8" height="10" align="absmiddle" alt="Sort" /></a></th><th data-breakpoints="xs sm" data-type="html" style="display: table-cell;"><a class="listViewThLinkS1" href="javascript:showSubPanel('history','/index.php?action=DetailView&amp;module=Tasks&amp;record=273fc4a4-565f-1e9e-efe5-59f36c5a8439&amp;return_module=Tasks&amp;return_action=DetailView&amp;offset=1&amp;Tasks_history_CELL_offset=&amp;inline=true&amp;to_pdf=true&amp;action=SubPanelViewer&amp;subpanel=history&amp;Tasks_history_CELL_ORDER_BY=date_entered&amp;layout_def_key=Tasks',true);">Date Created  <img border="0" src="themes/SuiteP/images/arrow_down.png?v=prtr747ZDllDCQrg6pfcIA" width="8" height="10" align="absmiddle" alt="Sorted Descending" /></a></th><th data-breakpoints="xs sm md" data-type="html" style="display: table-cell;"><a class="listViewThLinkS1" href="javascript:showSubPanel('history','/index.php?action=DetailView&amp;module=Tasks&amp;record=273fc4a4-565f-1e9e-efe5-59f36c5a8439&amp;return_module=Tasks&amp;return_action=DetailView&amp;offset=1&amp;Tasks_history_CELL_offset=&amp;inline=true&amp;to_pdf=true&amp;action=SubPanelViewer&amp;subpanel=history&amp;Tasks_history_CELL_ORDER_BY=assigned_user_name&amp;layout_def_key=Tasks',true);">Assigned User  <img border="0" src="themes/SuiteP/images/arrow.png?v=prtr747ZDllDCQrg6pfcIA" width="8" height="10" align="absmiddle" alt="Sort" /></a></th><th data-type="html" style="display: table-cell;"><!-- extra th for the button --></th></tr>
+                <tr class="pagination" role="presentation">
+<td colspan="20" align="right">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left"><ul class="clickMenu fancymenu SugarActionMenu"><li class="single"><form onsubmit="return SUGAR.subpanelUtils.sendAndRetrieve(this.id, 'subpanel_history', 'Loading ...');" action="index.php" method="post" name="form" id="formformNotes"><a id="History_createnoteorattachment_button">Create Note or Attachment</a>
+<input type="hidden" name="target_module" value="Notes" />
+<input type="hidden" name="task_id" value="273fc4a4-565f-1e9e-efe5-59f36c5a8439" />
+<input type="hidden" name="task_name" value="Desafio Dojo teste" /><input type="hidden" name="to_pdf" value="true" /><input type="hidden" name="tpl" value="QuickCreate.tpl" /><input type="hidden" name="return_module" value="Tasks" />
+<input type="hidden" name="return_action" value="DetailView" />
+<input type="hidden" name="return_id" value="273fc4a4-565f-1e9e-efe5-59f36c5a8439" />
+<input type="hidden" name="record" value="" /><input type="hidden" name="action" value="SubpanelCreates" />
+<input type="hidden" name="module" value="Home" />
+<input type="hidden" name="target_action" value="QuickCreate" />
+<input type="hidden" name="parent_type" value="Tasks" />
+<input type="hidden" name="parent_name" value="Desafio Dojo teste" />
+<input type="hidden" name="parent_id" value="273fc4a4-565f-1e9e-efe5-59f36c5a8439" />
+<input title="Create" accesskey="" class="button" type="submit" name="History_createnoteorattachment_button" id="History_createnoteorattachment_button_old" value="Create Note or Attachment" style="display: none;" />
+</form></li></ul></td>
+<td nowrap="" align="right"><button type="button" name="listViewStartButton" title="Start" class="button" disabled=""><img src="themes/default/images/start_off.gif?v=prtr747ZDllDCQrg6pfcIA" aborder="0" align="absmiddle" alt="Start" /></button>  <button type="button" name="listViewPrevButton" title="Previous" class="button" disabled=""><img src="themes/default/images/previous_off.gif?v=prtr747ZDllDCQrg6pfcIA" border="0" align="absmiddle" alt="Previous" /></button>  <span class="pageNumbers">(0 - 0 of 0)</span>  <button type="button" name="listViewNextButton" title="Next" class="button" disabled=""><img src="themes/default/images/next_off.gif?v=prtr747ZDllDCQrg6pfcIA" aborder="0" align="absmiddle" alt="Next" /></button>  <button type="button" name="listViewEndButton" title="End" class="button" disabled=""><img src="themes/default/images/end_off.gif?v=prtr747ZDllDCQrg6pfcIA" border="0" align="absmiddle" alt="End" /></button></td></tr></tbody></table>
+</td>
+</tr>
+
+        <tr id="history_search" class="pagination" style="display:none">
+            <td align="right" colspan="20">
+                
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr class="footable-empty"><td colspan="8">No results found.</td></tr></tbody>
+</table>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </li>
+    <li class="noBullet" id="whole_subpanel_securitygroups">
+        
+        <div class="panel panel-default sub-panel">
+            <div class="panel-heading panel-heading-collapse">
+
+                            <a id="subpanel_title_securitygroups" class="collapsed" role="button" data-toggle="collapse" href="#subpanel_securitygroups" aria-expanded="false">
+                                <div class="col-xs-10 col-sm-11 col-md-11">
+                        <div>
+                                                                                        <img src="themes/SuiteP/images/sub_panel/SecurityGroups.svg" />
+                                                        Security Groups
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+                            <div class="panel-body panel-collapse collapse" id="subpanel_securitygroups">
+                                <div class="tab-content">
+                        <div id="list_subpanel_securitygroups">
+                            <script>
+                function select_dialog() {
+                	var $dialog = $('&lt;div&gt;&lt;/div&gt;')
+					.html('&lt;a style=\'width: 150px\' name="thispage" class=\'menuItem\' onmouseover=\'hiliteItem(this,"yes");\' onmouseout=\'unhiliteItem(this);\' onclick=\'if (document.MassUpdate.select_entire_list.value==1){document.MassUpdate.select_entire_list.value=0;sListView.check_all(document.MassUpdate, "mass[]", true, 10)}else {sListView.check_all(document.MassUpdate, "mass[]", true)};\' href=\'javascript:void(0)\'&gt;Select This Page&amp;nbsp;&amp;#x28;10&amp;#x29;&amp;#x200E;&lt;/a&gt;&lt;a style=\'width: 150px\' name="selectall" class=\'menuItem\' onmouseover=\'hiliteItem(this,"yes");\' onmouseout=\'unhiliteItem(this);\' onclick=\'sListView.check_entire_list(document.MassUpdate, "mass[]",true,0);\' href=\'javascript:void(0)\'&gt;Select All&amp;nbsp;&amp;#x28;0&amp;#x29;&amp;#x200E;&lt;/a&gt;&lt;a style=\'width: 150px\' name="deselect" class=\'menuItem\' onmouseover=\'hiliteItem(this,"yes");\' onmouseout=\'unhiliteItem(this);\' onclick=\'sListView.clear_all(document.MassUpdate, "mass[]", false);\' href=\'javascript:void(0)\'&gt;Deselect All&lt;/a&gt;')
+					.dialog({
+						autoOpen: false,
+						width: 150
+					});
+					$dialog.dialog('open');
+
+                }
+                </script><input type="hidden" name="show_plus" value="" />
+<table cellpadding="0" cellspacing="0" border="0" class="list view table-responsive subpanel-table footable footable-2 breakpoint-lg" data-empty="No results found." data-breakpoints="{ &quot;xs&quot;: 754, &quot;sm&quot;: 750, &quot;md&quot;: 768, &quot;lg&quot;: 992}" style="display: table;">
+    <thead>
+        <tr class="footable-header">
+            
+            
+                                                                                
+                
+                                
+                
+                                                                                
+                
+                                
+                
+                        
+        <th data-type="html" style="display: table-cell;"><!-- extra th for the plus button --> </th><th data-breakpoints="" data-type="html" style="display: table-cell;"><a class="listViewThLinkS1" href="javascript:showSubPanel('securitygroups','/index.php?action=DetailView&amp;module=Tasks&amp;record=273fc4a4-565f-1e9e-efe5-59f36c5a8439&amp;return_module=Tasks&amp;return_action=DetailView&amp;offset=1&amp;Tasks_securitygroups_CELL_offset=&amp;inline=true&amp;to_pdf=true&amp;action=SubPanelViewer&amp;subpanel=securitygroups&amp;Tasks_securitygroups_CELL_ORDER_BY=name&amp;layout_def_key=Tasks',true);">Name  <img border="0" src="themes/SuiteP/images/arrow_up.png?v=prtr747ZDllDCQrg6pfcIA" width="8" height="10" align="absmiddle" alt="Sorted Ascending" /></a></th><th data-breakpoints="" data-type="html" style="display: table-cell;">Description</th><th data-type="html" style="display: table-cell;"><!-- extra th for the button --></th></tr>
+                <tr class="pagination" role="presentation">
+<td colspan="20" align="right">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left"><ul class="clickMenu fancymenu SugarActionMenu"><li class="single"><a id="securitygroups_tasks_select_button">Select</a> <input type="button" name="securitygroups_tasks_select_button" id="securitygroups_tasks_select_button_old" class="button" title="Select" value="Select" onclick="open_popup(&quot;SecurityGroups&quot;,600,400,&quot;&quot;,true,true,{&quot;call_back_function&quot;:&quot;set_return_and_save_background&quot;,&quot;form_name&quot;:&quot;DetailView&quot;,&quot;field_to_name_array&quot;:{&quot;id&quot;:&quot;subpanel_id&quot;},&quot;passthru_data&quot;:{&quot;child_field&quot;:&quot;securitygroups&quot;,&quot;return_url&quot;:&quot;index.php%3Fmodule%3DTasks%26action%3DSubPanelViewer%26subpanel%3Dsecuritygroups%26record%3D273fc4a4-565f-1e9e-efe5-59f36c5a8439%26sugar_body_only%3D1&quot;,&quot;link_field_name&quot;:&quot;SecurityGroups&quot;,&quot;module_name&quot;:&quot;securitygroups&quot;,&quot;refresh_page&quot;:1}},&quot;MultiSelect&quot;,true);" style="display: none;" />
+</li></ul></td>
+<td nowrap="" align="right"><button type="button" name="listViewStartButton" title="Start" class="button" disabled=""><img src="themes/default/images/start_off.gif?v=prtr747ZDllDCQrg6pfcIA" aborder="0" align="absmiddle" alt="Start" /></button>  <button type="button" name="listViewPrevButton" title="Previous" class="button" disabled=""><img src="themes/default/images/previous_off.gif?v=prtr747ZDllDCQrg6pfcIA" border="0" align="absmiddle" alt="Previous" /></button>  <span class="pageNumbers">(0 - 0 of 0)</span>  <button type="button" name="listViewNextButton" title="Next" class="button" disabled=""><img src="themes/default/images/next_off.gif?v=prtr747ZDllDCQrg6pfcIA" aborder="0" align="absmiddle" alt="Next" /></button>  <button type="button" name="listViewEndButton" title="End" class="button" disabled=""><img src="themes/default/images/end_off.gif?v=prtr747ZDllDCQrg6pfcIA" border="0" align="absmiddle" alt="End" /></button></td></tr></tbody></table>
+</td>
+</tr>
+
+        <tr id="securitygroups_search" class="pagination" style="display:none">
+            <td align="right" colspan="20">
+                
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+    
+        <tr class="footable-empty"><td colspan="4">No results found.</td></tr></tbody>
+</table>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </li>
+</ul>
+        <script>
+        
+        var SubpanelInit = function() {
+            SubpanelInitTabNames(["history","securitygroups"]);
+          $('.sub-panel .table-responsive').footable();
+          // collapse subpanels when device is mobile / tablet
+          if($(window).width() &lt;= SUGAR.measurements.breakpoints.large) {
+            $('.panel-collapse').removeClass('in');
+            $('.panel-heading-collapse a').removeClass('in');
+            $('.panel-heading-collapse a').addClass('collapsed');
+          }
+        }
+        var SubpanelInitTabNames = function(tabNames) {
+            subpanel_dd = new Array();
+            j = 0;
+            for(i in tabNames) {
+                subpanel_dd[j] = new ygDDList('whole_subpanel_' + tabNames[i]);
+                subpanel_dd[j].setHandleElId('subpanel_title_' + tabNames[i]);
+                subpanel_dd[j].onMouseDown = SUGAR.subpanelUtils.onDrag;
+                subpanel_dd[j].afterEndDrag = SUGAR.subpanelUtils.onDrop;
+                j++;
+            }
+            YAHOO.util.DDM.mode = 1;
+        }
+        currentModule = 'Tasks';
+        SUGAR.util.doWhen(
+                "typeof(SUGAR.subpanelUtils) == 'object' &amp;&amp; typeof(SUGAR.subpanelUtils.onDrag) == 'function'" +
+                " &amp;&amp; document.getElementById('subpanel_list')",
+                SubpanelInit
+        );
+        
+    </script>
+<script>
+    var ModuleSubPanels = {"Notes":["history"],"SecurityGroups":["securitygroups"]};
+    
+    setTimeout(function() {
+        if(typeof SUGAR.subpanelUtils.currentSubpanelGroup !== "undefined") {
+            SUGAR.subpanelUtils.loadSubpanelGroup(SUGAR.subpanelUtils.currentSubpanelGroup);
+        }
+    }, 500);
+    
+</script>
+
+</div><a id="History_createnoteorattachment_button_accesskey" accesskey="N"></a>
+</div>
+<!-- END of container-fluid, pageContainer divs -->
+<!-- Start Footer Section -->
+    <!-- Start generic footer -->
+    
+    <!-- END Generic Footer -->
+<!-- END Footer Section -->
+
+    <script>
+
+        //qe_init function sets listeners to click event on elements of 'quickEdit' class
+        if (typeof(DCMenu) != 'undefined') {
+            DCMenu.qe_refresh = false;
+            DCMenu.qe_handle;
+        }
+        function qe_init() {
+
+            //do not process if YUI is undefined
+            if (typeof(YUI) == 'undefined' || typeof(DCMenu) == 'undefined') {
+                return;
+            }
+
+
+            //remove all existing listeners.  This will prevent adding multiple listeners per element and firing multiple events per click
+            if (typeof(DCMenu.qe_handle) != 'undefined') {
+                DCMenu.qe_handle.detach();
+            }
+
+            //set listeners on click event, and define function to call
+            YUI().use('node', function (Y) {
+                var qe = Y.all('.quickEdit');
+                var refreshDashletID;
+                var refreshListID;
+
+                //store event listener handle for future use, and define function to call on click event
+                DCMenu.qe_handle = qe.on('click', function (e) {
+                    //function will flash message, and retrieve data from element to pass on to DC.miniEditView function
+                    ajaxStatus.flashStatus(SUGAR.language.get('app_strings', 'LBL_LOADING'), 800);
+                    e.preventDefault();
+                    if (typeof(e.currentTarget.getAttribute('data-dashlet-id')) != 'undefined') {
+                        refreshDashletID = e.currentTarget.getAttribute('data-dashlet-id');
+                    }
+                    if (typeof(e.currentTarget.getAttribute('data-list')) != 'undefined') {
+                        refreshListID = e.currentTarget.getAttribute('data-list');
+                    }
+                    DCMenu.miniEditView(e.currentTarget.getAttribute('data-module'), e.currentTarget.getAttribute('data-record'), refreshListID, refreshDashletID);
+                });
+
+            });
+        }
+
+        qe_init();
+
+        SUGAR_callsInProgress++;
+        SUGAR._ajax_hist_loaded = true;
+        if (SUGAR.ajaxUI)
+            YAHOO.util.Event.onContentReady('ajaxUI-history-field', SUGAR.ajaxUI.firstLoad);
+
+
+
+
+        $(function(){
+
+            // fix for campaign wizard
+            if($('#wizard').length) {
+
+                // footer fix
+                var bodyHeight = $('body').height();
+                var contentHeight = $('#pagecontent').height() + $('#wizard').height();
+                var fieldsetHeight = $('#pagecontent').height() + $('#wizard fieldset').height();
+                var height = bodyHeight &lt; contentHeight ? contentHeight : bodyHeight;
+                if(fieldsetHeight &gt; height) {
+                    height = fieldsetHeight;
+                }
+                height += 50;
+                $('#content').css({
+                    'min-height': height + 'px'
+                });
+
+                // uploader fix
+                $('#step1_uploader').css({
+                    position: 'relative',
+                    top: ($('#wizard').height() - 90) + 'px'
+                });
+            }
+        });
+
+    </script>
+
+</div>
+<div class="modal fade modal-generic" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="title-generic">Reset Password</h4>
+            </div>
+            <div class="modal-body">
+                <!---->
+                <div class="container-fluid">
+
+                </div>
+                <!---->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" type="button" data-dismiss="modal">Cancel</button>
+                <button id="btn-generic" class="btn btn-danger" type="button">OK</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog2" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Supercharged by SuiteCRM</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="dialog2" class="ui-dialog-content ui-widget-content">
+                <p>SuiteCRM has been written and assembled by <a href="https://salesagility.com">SalesAgility</a>. The Program is provided AS IS, without warranty. Licensed under AGPLv3.</p>
+                <br />
+                <p>This program is free software; you can redistribute it and/or modify it under the terms of the GNU Affero General Public License version 3 as published by the Free Software Foundation, including the additional permission set forth in the source code header.</p>
+                <br />
+                <p>SuiteCRM is a trademark of SalesAgility Ltd. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+                <br />
+            </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog" aria-labelledby="ui-id-2" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-2" class="ui-dialog-title">© Powered By SugarCRM</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="dialog" class="ui-dialog-content ui-widget-content">
+                <p>© 2004-2013 SugarCRM Inc. The Program is provided AS IS, without warranty.  Licensed under <a href="LICENSE.txt" target="_blank" class="copyRightLink">AGPLv3</a>.<br />This program is free software; you can redistribute it and/or modify it under the terms of the <br /><a href="LICENSE.txt" target="_blank" class="copyRightLink"> GNU Affero General Public License version 3</a> as published by the Free Software Foundation, including the additional permission set forth in the source code header.<br />SugarCRM is a trademark of SugarCRM, Inc. All other company and product names may be trademarks of the respective companies with which they are associated.<br /><img style="margin-top: 2px" border="0" width="120" height="34" src="include/images/poweredby_sugarcrm_65.png" alt="Powered By SugarCRM" />
+</p>
+            </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><footer class="expandedSidebar">
+        <div id="copyright_data">
+            
+            
+            <div id="copyrightbuttons" class="footer_left">
+                <a id="admin_options">© Supercharged by SuiteCRM</a>
+                <a id="powered_by">© Powered By SugarCRM</a>
+            </div>
+        </div>
+    	<div class="footer_right">
+    		
+    		<a onclick="SUGAR.util.top();" href="javascript:void(0)">Back to top</a>
+    	</div>
+    </footer></body></html>
